@@ -1,28 +1,449 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Coming Soon</title>
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-    }
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: sans-serif;
-      background-color: #f9f9f9;
-    }
-    h1 {
-      font-size: 2rem;
-      color: #333;
-    }
-  </style>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description"
+    content="Extending model-based reinforcement learning to long-horizon tasks by learning stable skills and directly predicting their outcomes.">
+  <meta property="og:title" content="Long-Horizon Planning with Predictable Skills" />
+  <meta property="og:description"
+    content="Extending model-based reinforcement learning to long-horizon tasks by learning stable skills and directly predicting their outcomes." />
+  <meta property="og:url" content="https://nicoguertler.github.io/splates-pages/" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/banner_small.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="Long-Horizon Planning with Predictable Skills">
+  <meta name="twitter:description"
+    content="Extending model-based reinforcement learning to long-horizon tasks by learning stable skills and directly predicting their outcomes.">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/banner_small.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords"
+    content="model-based reinforcement learning, skill learning, long-horizon planning, long-term credit assignment, compounding model errors">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Long-Horizon Planning with Predictable Skills</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <!-- MathJax -->
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
+
 <body>
-  <h1>Coming soon!</h1>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Long-Horizon Planning with Predictable Skills</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <!-- <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Nico Gürtler</a>,</span> -->
+                Nico Gürtler,</span>
+              <span class="author-block">
+                Georg Martius</span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">University of Tübingen & Max Planck Institute for Intelligent Systems,
+                Tübingen, Germany<br>Published at RLC 2025</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <!-- <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark"> -->
+                  <a href="https://openreview.net/pdf?id=G8ybRSxO10" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- Github link -->
+                <!-- <span class="link-block">
+                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span> -->
+
+                <!-- ArXiv abstract Link -->
+                <!-- <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+                </span> -->
+                <span class="link-block">
+                  <a href="mailto:nico.guertler@uni-tuebingen.de,georg.martius@uni-tuebingen.de" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fa fa-envelope"></i>
+                    </span>
+                    <span>Contact</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Banner -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="static/images/banner.png" alt="Banner image" class="banner-image">
+      </div>
+    </div>
+  </section>
+  <!-- End banner -->
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Model-based reinforcement learning (RL) leverages learned world models to plan ahead or train in
+              imagination. Recently, this approach has significantly improved sample efficiency and performance across
+              various challenging domains ranging from playing games to controlling robots. However, there are
+              fundamental limits to how accurate the long-term predictions of a world model can be, for example due to
+              unstable environment dynamics or partial observability. These issues are further exacerbated by the
+              compounding error problem. Model-based RL is therefore generally limited to short rollouts with the world
+              model, and consequently struggles with long-term credit assignment.
+              We argue that this limitation can be addressed by modeling the outcome of temporally extended skills
+              instead of the effect of primitive actions.
+              To this end, we propose a mutual-information-based skill learning objective that ensures predictable,
+              diverse, and task-related behavior. The resulting skills compensate for perturbations and drifts, enabling
+              stable long-horizon planning. We thus introduce <em>Stable Planning with Temporally Extended Skills
+                (SPlaTES)</em>, a sample-efficient hierarchical agent consisting of model predictive control with an
+              abstract skill world model on the higher level, and skill execution on the lower level.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <!-- Image carousel -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div id="image-carousel" class="carousel results-carousel">
+          <div class="item">
+            <img src="static/images/overview.png" alt="Algorithm overview"
+              style="width: 70%; display: block; margin: 50px auto;" />
+            <div class="subtitle">
+              Our proposed hierarchical algorithm SPlaTES in three steps:
+              <ol style="margin-top: 10px; margin-bottom: 10px;">
+                <li>Encode the environment state to obtain an abstract state.</li>
+                <li>Plan a skill sequence (with iCEM) starting from the abstract state to maximize the episode return.
+                  Use a temporally abstract dynamics model to predict skill outcomes in abstract state space.</li>
+                <li>Execute the first skill in the sequence for \(K\) steps. Do high-level MPC by starting from 1.
+                  again.</li>
+
+              </ol>
+            </div>
+          </div>
+          <div class="item">
+            <img src="static/images/splates_vs_dads.png" alt="Comparison of skill behavior for SPlaTES and DADS." />
+            <div class="subtitle">
+              <p style="margin-top: 10px; margin-bottom: 10px;">
+                <b>Left: Skills applied to a velocity-controlled point mass under a perturbation.</b><br />
+                DADS: Predictions are marked by dashed lines.<br />
+                SPlaTES: Predictions of the abstract world model are marked by crosses, actual states at the end of
+                skill executions by circles.<br />
+                SPlaTES compensates the perturbation and stays close to the prediction while DADS cannot recover from
+                it.
+              </p>
+              <p>
+                <b>Right: Execution of a fixed skill sequence with a quadruped.</b><br />
+                A force is applied in one time step (red arrow). SPlaTES corrects the resulting deviation while DADS
+                cannot.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End image carousel -->
+
+
+  <!-- Explanation video -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <!-- Paper video. -->
+        <h2 class="title is-3">Algorithm overview video</h2>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+
+            <div class="publication-video">
+              <video poster="static/images/overview_poster.png" id="overview_video" controls muted height="100%">
+                <!-- Your video file here -->
+                <source src="static/videos/overview.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Video carousel -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">Rollouts</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-video1">
+            <h3 class="subtitle is-4 has-text-centered">Fetch Pick & Place</h3>
+            <div style="display: flex; gap: 20px;">
+              <div style="flex: 1;">
+                <video id="video1" autoplay controls muted loop width="100%">
+                  <source src="static/videos/fpap_tdmpc2_rollouts.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered" style="padding:20px">TD-MPC 2</h2>
+              </div>
+
+              <div style="flex: 1;">
+                <video id="video2" autoplay controls muted loop width="100%">
+                  <source src="static/videos/fpap_tdmpc2_her_rollouts.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered" style="padding: 20px">TD-MPC 2 with HER</h2>
+              </div>
+
+              <div style="flex: 1;">
+                <video id="video3" autoplay controls muted loop width="100%">
+                  <source src="static/videos/fpap_dads_rollouts.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered" style="padding: 20px">DADS</h2>
+              </div>
+
+              <div style="flex: 1;">
+                <video id="video4" autoplay controls muted loop width="100%">
+                  <source src="static/videos/fpap_splates_rollouts.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered" style="padding: 20px">SPlaTES (ours)</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="item item-video2">
+            <h3 class="subtitle is-4 has-text-centered">Fetch Pick & Place Barrier</h3>
+            <div style="display: flex; gap: 20px;">
+              <div style="flex: 1;">
+                <video id="video5" autoplay controls muted loop width="100%">
+                  <source src="static/videos/barrier_tdmpc2_rollouts.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered" style="padding:20px">TD-MPC 2</h2>
+              </div>
+
+              <div style="flex: 1;">
+                <video id="video6" autoplay controls muted loop width="100%">
+                  <source src="static/videos/barrier_tdmpc2_her_fixed.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered" style="padding: 20px">TD-MPC 2 with HER</h2>
+              </div>
+
+              <div style="flex: 1;">
+                <video id="video7" autoplay controls muted loop width="100%">
+                  <source src="static/videos/barrier_dads_rollouts.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered" style="padding: 20px">DADS</h2>
+              </div>
+
+              <div style="flex: 1;">
+                <video id="video8" autoplay controls muted loop width="100%">
+                  <source src="static/videos/barrier_splates_rollouts.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered" style="padding: 20px">SPlaTES (ours)</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="item item-video3">
+            <h3 class="subtitle is-4 has-text-centered">Ant Maze Medium</h3>
+            <div style="display: flex; gap: 20px;">
+              <div style="flex: 1;">
+                <video id="video9" autoplay controls muted loop width="100%">
+                  <source src="static/videos/ant_medium_tdmpc2_rollouts.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered" style="padding:20px">TD-MPC 2</h2>
+              </div>
+
+              <div style="flex: 1;">
+                <video id="video10" autoplay controls muted loop width="100%">
+                  <source src="static/videos/ant_medium_tdmpc2_her_rollouts.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered" style="padding: 20px">TD-MPC 2 with HER</h2>
+              </div>
+
+              <div style="flex: 1;">
+                <video id="video11" autoplay controls muted loop width="100%">
+                  <source src="static/videos/ant_medium_dads_rollouts.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered" style="padding: 20px">DADS</h2>
+              </div>
+
+              <div style="flex: 1;">
+                <video id="video12" autoplay controls muted loop width="100%">
+                  <source src="static/videos/ant_medium_splates_rollouts.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered" style="padding: 20px">SPlaTES (ours)</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="item item-video4">
+            <h3 class="subtitle is-4 has-text-centered">Ant Maze Push</h3>
+            <div style="display: flex; gap: 20px;">
+              <div style="flex: 1;">
+                <video id="video13" autoplay controls muted loop width="100%">
+                  <source src="static/videos/ant_push_tdmpc2_rollouts.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered" style="padding:20px">TD-MPC 2</h2>
+              </div>
+
+              <div style="flex: 1;">
+                <video poster="" id="video14" autoplay controls muted loop width="100%">
+                  <source src="static/videos/ant_push_tdmpc2_her_rollouts.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered" style="padding: 20px">TD-MPC 2 with HER</h2>
+              </div>
+
+              <div style="flex: 1;">
+                <video id="video15" autoplay controls muted loop width="100%">
+                  <source src="static/videos/ant_push_dads_rollouts.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered" style="padding: 20px">DADS</h2>
+              </div>
+
+              <div style="flex: 1;">
+                <video id="video16" autoplay controls muted loop width="100%">
+                  <source src="static/videos/ant_push_splates_rollouts.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered" style="padding: 20px">SPlaTES (ours)</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="item item-video5">
+            <h3 class="subtitle is-4 has-text-centered">Distillation on Ant Maze Large</h3>
+            <div style="display: flex; gap: 20px;">
+              <div style="flex: 1; text-align:center;">
+                <video id="video14" autoplay controls muted loop width="50%">
+                  <source src="static/videos/ant_large_splates_rollouts.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered" style="padding:20px">SPlaTES (ours)</h2>
+              </div>
+
+              <div style="flex: 1; text-align:center;">
+                <video id="video15" autoplay controls muted loop width="50%">
+                  <source src="static/videos/ant_large_splates_distilled_rollouts.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered" style="padding: 20px">SPlaTES (ours)<br /> distilled into TD-MPC2
+                  agent</h2>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End video carousel -->
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{
+  gurtler2025longhorizon,
+  title={Long-Horizon Planning with Predictable Skills},
+  author={Nico G{\"u}rtler and Georg Martius},
+  booktitle={Reinforcement Learning Conference},
+  year={2025},
+  url={https://openreview.net/forum?id=G8ybRSxO10}
+}</code></pre>
+    </div>
+  </section>
+  <!--End BibTex citation -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+  <script type="text/javascript">
+    var sc_project = 13154213;
+    var sc_invisible = 1;
+    var sc_security = "be1d2c1d"; 
+  </script>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+  <noscript>
+    <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img
+          class="statcounter" src="https://c.statcounter.com/13154213/0/be1d2c1d/1/" alt="Web Analytics"
+          referrerPolicy="no-referrer-when-downgrade"></a></div>
+  </noscript>
+
 </body>
+
 </html>
